@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { FC } from "react";
 import type { Blog } from "@/types/blog";
+import { withBasePath } from "@/lib/withBasePath";
 
 export interface BlogPostsGridProps {
   blogs: Blog[];
@@ -37,7 +38,7 @@ const BlogPostsGrid: FC<BlogPostsGridProps> = ({
                   rgba(44, 82, 130, 0.5),
                   rgba(66, 153, 225, 0.2)
                 ),
-                url(${blog.featuredImage || ""})
+                url("${withBasePath(blog.featuredImage || "")}")
               `,
               backgroundSize: "cover",
               backgroundPosition: "center",

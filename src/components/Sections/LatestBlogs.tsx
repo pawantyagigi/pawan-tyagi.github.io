@@ -1,6 +1,7 @@
 import { Blog } from "@/types/blog";
 import Link from "next/link";
 import React from "react";
+import { withBasePath } from "@/lib/withBasePath";
 
 interface LatestBlogsProps {
   blogs: Blog[];
@@ -38,7 +39,7 @@ const LatestBlogs: React.FC<LatestBlogsProps> = ({ blogs }) => {
                       rgba(44, 82, 130, 0.5),
                       rgba(66, 153, 225, 0.2)
                     ),
-                    url(${featured.featuredImage})
+                    url("${withBasePath(featured.featuredImage)}")
                   `,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -104,7 +105,7 @@ const LatestBlogs: React.FC<LatestBlogsProps> = ({ blogs }) => {
                       rgba(44, 82, 130, 0.5),
                       rgba(66, 153, 225, 0.2)
                     ),
-                    url(${blog.featuredImage})
+                    url("${withBasePath(blog.featuredImage)}")
                   `,
                   backgroundSize: "cover",
                   backgroundPosition: "center",

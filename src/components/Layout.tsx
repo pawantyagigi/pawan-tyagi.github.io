@@ -7,6 +7,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import SiteFooter from "@/components/SiteFooter";
 import ThemeToggle from "@/components/ThemeToggle";
 import SiteSearch from "@/components/SiteSearch";
+import { withBasePath } from "@/lib/withBasePath";
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -44,18 +45,18 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href={withBasePath("/site.webmanifest")} />
+        <link rel="icon" href={withBasePath("/favicon.svg")} type="image/svg+xml" />
+        <link rel="icon" href={withBasePath("/favicon.ico")} sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href={withBasePath("/favicon/favicon-32x32.png")} />
+        <link rel="icon" type="image/png" sizes="16x16" href={withBasePath("/favicon/favicon-16x16.png")} />
+        <link rel="apple-touch-icon" href={withBasePath("/favicon/apple-touch-icon.png")} />
         <meta name="theme-color" content="#fff" />
         <link
           rel="alternate"
           type="application/rss+xml"
           title="Pawan Tyagi Blog RSS"
-          href="/rss.xml"
+          href={withBasePath("/rss.xml")}
         />
       </Head>
 

@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 import WebsiteMetaBundle from "@/components/meta/WebsiteMetaBundle";
 import TitleBanner from "@/components/TitleBanner";
 import { searchItems, type SearchItem } from "@/lib/search";
+import { withBasePath } from "@/lib/withBasePath";
 
 const SearchPage = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const SearchPage = () => {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/search-index.json")
+    fetch(withBasePath("/search-index.json"))
       .then((r) => r.json())
       .then((data: { items: SearchItem[] }) => {
         if (!cancelled) {

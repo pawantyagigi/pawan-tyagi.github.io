@@ -19,6 +19,7 @@ import BlogHeader from "@/components/BlogHeader";
 
 import CommentBox from "@/components/CommentBox";
 import MarkdownLink from "@/components/blog/MarkdownLink";
+import MarkdownImage from "@/components/blog/MarkdownImage";
 import CodeBlock from "@/components/blog/CodeBlock";
 import MarkdownHeading from "@/components/blog/MarkdownHeading";
 import BlogTableOfContents from "@/components/blog/BlogTableOfContents";
@@ -124,6 +125,7 @@ const Blog: React.FC<BlogProps> = ({ frontmatter, markdown, slug }) => {
                 remarkPlugins={[remarkGfm]}
                 components={{
                   a: MarkdownLink,
+                  img: MarkdownImage,
                   pre: ({ children, className }) => (
                     <CodeBlock className={className}>{children}</CodeBlock>
                   ),

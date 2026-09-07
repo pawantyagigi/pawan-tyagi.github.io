@@ -1,6 +1,7 @@
 // import config from "@/lib/config";
 // import Navigation from "./Navigation";
 import Link from "next/link";
+import { withBasePath } from "@/lib/withBasePath";
 
 const SiteFooter: React.FC = () => {
   return (
@@ -78,7 +79,7 @@ const SiteFooter: React.FC = () => {
                 <Link href="/sitemap.xml">Sitemap</Link>
               </li>
               <li>
-                <a href="/rss.xml">RSS Feed</a>
+                <a href={withBasePath("/rss.xml")}>RSS Feed</a>
               </li>
             </ul>
           </div>

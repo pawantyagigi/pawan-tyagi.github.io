@@ -12,12 +12,13 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { searchItems, type SearchItem } from "@/lib/search";
+import { withBasePath } from "@/lib/withBasePath";
 
 let cachedIndex: SearchItem[] | null = null;
 
 async function loadIndex(): Promise<SearchItem[]> {
   if (cachedIndex) return cachedIndex;
-  const res = await fetch("/search-index.json");
+  const res = await fetch(withBasePath("/search-index.json"));
   if (!res.ok) throw new Error("Search index unavailable");
   const data = (await res.json()) as { items: SearchItem[] };
   cachedIndex = data.items || [];

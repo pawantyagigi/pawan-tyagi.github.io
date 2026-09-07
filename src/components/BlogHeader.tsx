@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import FormattedDate from "@/components/FormattedDate";
+import { withBasePath } from "@/lib/withBasePath";
 
 export interface BlogHeaderProps {
   className?: string;
@@ -28,7 +29,7 @@ const BlogHeader: FC<BlogHeaderProps> = ({
     <div className={`background-primary blog-header ${className || ""}`}>
       <img
         className="blog-header-image"
-        src={featureImage}
+        src={withBasePath(featureImage)}
         alt={title}
         width={1200}
         height={630}

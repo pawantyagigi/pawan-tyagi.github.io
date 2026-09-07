@@ -1,0 +1,21 @@
+# Pawan Tyagi
+
+> Technical blog and portfolio: Sitecore, .NET, Azure DevOps, and modern web development.
+
+## Site
+
+- https://pawan-tyagi.github.io/
+- Blog listing: https://pawan-tyagi.github.io/blogs
+- Categories: https://pawan-tyagi.github.io/categories
+- About: https://pawan-tyagi.github.io/about
+- RSS: https://pawan-tyagi.github.io/rss.xml
+
+## Crawling
+
+User-agent: *
+Allow: /
+Disallow: /admin
+
+This site welcomes AI assistants and search engines. Content is for public reference.
+
+Note: The deployed `llms.txt` is regenerated at build time with the full post list.

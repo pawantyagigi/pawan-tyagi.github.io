@@ -1,0 +1,36 @@
+tags:
+  - slug: sitecore
+    name: Sitecore
+    description: >-
+      Sitecore XP fundamentals and day-to-day solutions—admin tasks, forms,
+      Helix practices, and real project troubleshooting.
+  - slug: sitecore-xm-cloud
+    name: Sitecore XM Cloud
+    description: >-
+      Sitecore XM Cloud guides—publishing, serialization, GraphQL, Experience
+      Edge, workflows, and cloud-native Sitecore delivery.
+  - slug: sitecore-search
+    name: Sitecore Search
+    description: >-
+      Sitecore Search tutorials—API crawlers, feed crawlers, SFTP indexing,
+      pagination strategies, and search configuration.
+  - slug: sitecore-content-serialization
+    name: Content Serialization
+    description: >-
+      Sitecore Content Serialization (SCS) patterns for XM Cloud and XP—
+      module.json setup, sync workflows, and multi-site serialization.
+  - slug: sitecore-form
+    name: Sitecore Forms
+    description: >-
+      Sitecore Forms with webhooks, Sitecore Connect, and practical form
+      integration patterns for modern Sitecore solutions.
+  - slug: dam
+    name: Content Hub / DAM
+    description: >-
+      Sitecore Content Hub and DAM connector guides—browse, search, and insert
+      digital assets into XM Cloud and Experience Editor.
+  - slug: community
+    name: Community
+    description: >-
+      Community highlights, Stack Exchange contributions, blogging milestones,
+      and Sitecore ecosystem engagement.

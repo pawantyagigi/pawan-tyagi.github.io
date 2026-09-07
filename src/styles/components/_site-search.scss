@@ -1,0 +1,323 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-search {
+  position: relative;
+  flex: 1 1 12rem;
+  min-width: 9rem;
+  max-width: 18rem;
+
+  @include respond-to(small) {
+    display: none;
+  }
+}
+
+.site-search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.35rem;
+  padding: 0 0.65rem 0 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
+  }
+}
+
+.site-search-icon {
+  display: inline-flex;
+  color: var(--color-text-soft);
+  flex-shrink: 0;
+}
+
+.site-search-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+
+  &::placeholder {
+    color: var(--color-text-soft);
+  }
+
+  /* Hide native clear on some browsers to keep layout clean */
+  &::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+.site-search-kbd {
+  display: none;
+  margin-left: 0.15rem;
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-soft);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.65rem;
+  line-height: 1.2;
+
+  @media (min-width: 1100px) {
+    display: inline-block;
+  }
+}
+
+.site-search-dropdown {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  right: 0;
+  min-width: 18rem;
+  max-width: 24rem;
+  z-index: 1200;
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--color-card-shadow-hover);
+  overflow: hidden;
+}
+
+.site-search-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem;
+  max-height: 22rem;
+  overflow-y: auto;
+}
+
+.site-search-hit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.12s ease;
+
+  &:hover,
+  &.is-active {
+    background: var(--color-accent-soft);
+    text-decoration: none;
+  }
+}
+
+.site-search-hit-type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.site-search-hit-title {
+  font-size: 0.92rem;
+  font-weight: 650;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.site-search-hit-excerpt {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.site-search-empty {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.site-search-all {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-muted);
+  color: var(--color-accent);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    background: var(--color-accent-soft);
+  }
+}
+
+.search-page {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+  padding: 0.5rem 0 2rem;
+}
+
+.search-page-form {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+
+  @include respond-to(small) {
+    flex-direction: column;
+  }
+}
+
+.search-page-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 1rem;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
+  }
+}
+
+.search-page-submit {
+  padding: 0.85rem 1.35rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-accent-hover);
+  }
+}
+
+.search-page-status {
+  color: var(--color-text-muted);
+  margin: 0 0 1.25rem;
+}
+
+.search-page-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-page-card {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+
+  h2 {
+    margin: 0.2rem 0 0.45rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+}
+
+.search-page-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.search-page-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.search-page-tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.site-search-mobile-link {
+  display: flex;
+  align-items: center;
+  height: 2.35rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text-soft);
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+.site-search-mobile {
+  display: none;
+  margin: 0.75rem 15px 0.25rem;
+
+  @include respond-to(small) {
+    display: block;
+    max-width: none;
+  }
+}

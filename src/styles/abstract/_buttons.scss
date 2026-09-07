@@ -1,0 +1,57 @@
+.button {
+  border: 1px solid $primary;
+  margin: 15px 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  width: fit-content;
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $primary;
+    text-decoration: none;
+    color: $white;
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &.button-primary {
+    background: $primary;
+    color: $white;
+    border: 1px solid $white;
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      background: $white;
+      color: $primary;
+      border: 1px solid $primary;
+      text-decoration: none;
+    }
+  }
+
+  &.button-primary-alternate {
+    background: $white;
+    color: $primary;
+    border: 1px solid $white;
+    a {
+      color: $primary;
+    }
+
+    &:hover {
+      background: transparent;
+      border: 1px solid $white;
+      color: $white;
+      text-decoration: none;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

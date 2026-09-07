@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+
+# Host
+Host: https://pawan-tyagi.github.io
+
+# Sitemaps
+Sitemap: https://pawan-tyagi.github.io/sitemap.xml

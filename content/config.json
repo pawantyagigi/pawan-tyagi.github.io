@@ -1,0 +1,21 @@
+{
+  "base_url": "https://pawan-tyagi.github.io",
+  "site_title": "Pawan Tyagi",
+  "site_description": "Technical blog by Pawan Tyagi, Technical Lead at Altudo — Sitecore XM Cloud & 10 .NET certified, Azure AZ-204. Insights on Sitecore XP, XM Cloud, Content Hub, Search, and Helix.",
+  "site_keywords": [
+    "Pawan Tyagi",
+    "Insights With Me",
+    "Technical Lead Altudo",
+    "Sitecore XM Cloud Certified",
+    "Sitecore 10 .NET Developer",
+    "Azure AZ-204",
+    "Sitecore Helix",
+    "Technical Blogs"
+  ],
+  "posts_per_page": 5,
+  "twitter_account": "",
+  "github_account": "",
+  "linkedin_account": "https://www.linkedin.com/in/pawan-tyagi-6bb22357/",
+  "stackexchange_account": "",
+  "contact_email": "pawangurugi@gmail.com"
+}

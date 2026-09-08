@@ -56,7 +56,7 @@ const PC: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={withBasePath("/images/prft-icon.png")} alt="LinkedIn" />
+                <img src={withBasePath("/images/altudo-icon.png")} alt="Altudo" />
               </a>
             </div>
             <div className="title">

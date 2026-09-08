@@ -3,7 +3,7 @@ import config from "./config";
 /** Absolute URL for meta tags and JSON-LD (handles root-relative paths). */
 export function absoluteFromSiteRoot(pathOrUrl: string | undefined): string {
   if (!pathOrUrl)
-    return `${config.base_url.replace(/\/$/, "")}/images/logo.png`;
+    return `${config.base_url.replace(/\/$/, "")}/images/og-default.png`;
   if (pathOrUrl.startsWith("http://") || pathOrUrl.startsWith("https://")) {
     return pathOrUrl;
   }

@@ -40,10 +40,10 @@ const JsonLdMetaWebsite: FC<JsonLdMetaProps> = ({
             name: "Pawan Tyagi",
             logo: {
               "@type": "ImageObject",
-              url: `${config.base_url}/images/logo.png`,
+              url: `${config.base_url}/images/pt-logo.png`,
             },
           },
-          image: image ? image : `${config.base_url}/images/logo.png`,
+          image: image ? image : `${config.base_url}/images/pt-logo.png`,
           description: description,
         })}
       />

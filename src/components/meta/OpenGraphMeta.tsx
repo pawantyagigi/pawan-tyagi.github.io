@@ -31,16 +31,19 @@ const OpenGraphMeta: FC<OpenGraphMetaProps> = ({
   articleAuthor,
   articleTags,
 }) => {
+  const imageUrl = absoluteFromSiteRoot(image);
   return (
     <Head>
       <meta property="og:site_name" content={config.site_title} />
       <meta property="og:url" content={config.base_url + url} />
       <meta property="og:title" content={title ? [title, config.site_title].join(" | ") : ""} />
       <meta property="og:description" content={description ? description : config.site_description} />
-      <meta property="og:image" content={absoluteFromSiteRoot(image)} />
-      {image ? (
-        <meta property="og:image:alt" content={title ? title : config.site_title} />
-      ) : null}
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:secure_url" content={imageUrl} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title ? title : config.site_title} />
       <meta property="og:type" content={ogType} />
       <meta property="og:locale" content="en_US" />
       {ogType === "article" && articlePublishedTime ? (

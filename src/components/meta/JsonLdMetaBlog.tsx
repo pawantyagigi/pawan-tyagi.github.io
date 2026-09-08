@@ -36,7 +36,7 @@ const JsonLdMetaBlog: FC<JsonLdMetaProps> = ({
   inLanguage = "en",
   wordCount,
 }) => {
-  const imageUrl = absoluteFromSiteRoot(image ?? "/images/logo.png");
+  const imageUrl = absoluteFromSiteRoot(image ?? "/images/pt-logo.png");
 
   return (
     <Head>
@@ -60,7 +60,7 @@ const JsonLdMetaBlog: FC<JsonLdMetaProps> = ({
             name: "Pawan Tyagi",
             logo: {
               "@type": "ImageObject",
-              url: `${config.base_url}/images/logo.png`,
+              url: `${config.base_url}/images/pt-logo.png`,
             },
           },
           image: {

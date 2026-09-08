@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { withBasePath } from "@/lib/withBasePath";
 
 const PC: React.FC = () => {
   return (
@@ -16,7 +17,10 @@ const PC: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="images/ds-blog-logo.png" alt="Insights With Me" />
+                <img
+                  src={withBasePath("/images/ds-blog-logo.png")}
+                  alt="Insights With Me"
+                />
               </a>
             </div>
             <div className="title">
@@ -35,7 +39,7 @@ const PC: React.FC = () => {
           <div className="promo icon-promo-card col-6">
             <div className="icon-image">
               <Link href="/blogs">
-                <img src="images/github-images.jpeg" alt="Blog" />
+                <img src={withBasePath("/images/github-images.jpeg")} alt="Blog" />
               </Link>
             </div>
             <div className="title">
@@ -52,7 +56,7 @@ const PC: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="images/prft-icon.png" alt="LinkedIn" />
+                <img src={withBasePath("/images/prft-icon.png")} alt="LinkedIn" />
               </a>
             </div>
             <div className="title">
@@ -75,7 +79,10 @@ const PC: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="images/stack-exchange-sitecore.png" alt="Stack Exchange" />
+                <img
+                  src={withBasePath("/images/stack-exchange-sitecore.png")}
+                  alt="Stack Exchange"
+                />
               </a>
             </div>
             <div className="title">
